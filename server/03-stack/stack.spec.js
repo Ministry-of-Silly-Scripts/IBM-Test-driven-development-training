@@ -71,7 +71,11 @@ describe('a stack', () => {
     }).toThrowError('capacity underflow error');
   });
 
-  it.todo('pops the same one item when pushed');
+  it('pops the same one item when pushed', () => {
+    stack.push('a');
+    expect(stack.pop()).toBe('a')
+  });
+
   it.todo('pops two items with the most recent first');
   it.todo('accepts only a positive capacity');
 });
