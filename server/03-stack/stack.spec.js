@@ -1,5 +1,6 @@
 let stack = {
-  isEmpty: () => true
+  isEmpty: () => true,
+  size: () => 0,
 };
 
 describe('the stack canary spec', () => {
