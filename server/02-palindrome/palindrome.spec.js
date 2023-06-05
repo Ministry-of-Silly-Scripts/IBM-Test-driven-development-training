@@ -1,5 +1,6 @@
 let isPalindrome = (phrase) => {
-  if (phrase.trim() === '') return false
+  if (phrase === '') throw new Error('empty strings are not palindromes');
+  if (phrase.trim() === '') return false;
   return phrase === phrase.split('').reverse().join(''); 
 }
 
@@ -26,7 +27,7 @@ describe('the palindrome canary spec', () => {
 
   it('error for empty string', () => {
     expect(() => { 
-      isPalindrome(); 
+      isPalindrome(''); 
     }).toThrowError('empty strings are not palindromes')
   });
 
