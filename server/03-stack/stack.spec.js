@@ -76,9 +76,15 @@ describe('a stack', () => {
 
   it('pops the same one item when pushed', () => {
     stack.push('a');
-    expect(stack.pop()).toBe('a')
+    expect(stack.pop()).toBe('a');
   });
 
-  it.todo('pops two items with the most recent first');
+  it('pops two items with the most recent first', () => {
+    stack.push('1');
+    stack.push('2');
+    expect(stack.pop()).toBe('2');
+    expect(stack.pop()).toBe('1');
+  });
+
   it.todo('accepts only a positive capacity');
 });
